@@ -87,6 +87,11 @@
         var cbgb = {lat: 40.72528 , lng:-73.99194};
         var brillbuilding = {lat: 40.7610606 , lng: -73.98474010000001};
         var carnegiehall= {lat: 40.7650041 , lng: -73.97985030000001};
+        var danceteria= {lat: 40.7451 , lng: -73.9846};
+        var sedgwick= {lat: 40.847061 , lng: -73.924536};
+        var apollo= {lat: 40.810018  , lng: -73.950056};
+        var vanguard= {lat: 40.73603  , lng: -74.001686};
+
 
 
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -155,6 +160,54 @@
               'http://www.carnegiehall.org/</a> </p> '
               '</div>'+
               '</div>';
+            var content6 = '<div id="content6">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Danceteria</h1>'+
+            '30 W. 21st St., New York'+ '<br>' +
+            '<img src="http://s3.amazonaws.com/cms_uploads/liz/twilo.jpg">'+
+            '<div id="bodyContent6">'+
+            '<p>Danceteria was a well-known four-floor nightclub located in New York City which operated from 1979 until 1986. It catered to a diverse after-hours crowd coming from the downtown rock clubs Mudd Club, Trax, TR3, Chinese Chance and CBGB. Madonna, the Beastie Boys and Keith Haring all began their careers at this famed '80s dance club. It's also where British acts as enduring as the Smiths took their first NYC bows. Now the space is occupied by a showroom for high-end granite and marble products.</p>'+
+            '<p>Attribution: Danceteria, <a href="https://en.wikipedia.org/wiki/Danceteria">'+
+            'https://en.wikipedia.org/wiki/Danceteria</a> </p> '
+            '</div>'+
+            '</div>';
+            var content7 = '<div id="content7">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">1520 Sedgwick Ave</h1>'+
+              '1520 Sedgwick Ave, Bronx' + '<br>' +
+              '<img src="https://3.bp.blogspot.com/-hEhnUVWqKkg/UTehZRMxr9I/AAAAAAAACRQ/xd1d71xuHgw/s400/220px-1520_Sedwick_Ave.,_Bronx,_New_York1.JPG">'+
+              '<div id="bodyContent7">'+
+              "<p>1520 Sedgwick Avenue is a 102-unit apartment building in the Morris Heights neighborhood in the Bronx, New York City. In 2010, The New York Times reported that it is the accepted birthplace of hip hop.  Clive Campbell, later known as DJ Kool Herc, is credited with helping to start hip hop and rap music at a house concert in the building on August 11, 1973. At the concert he was DJing and emceeing in the recreation room of 1520 Sedgwick Avenue. Sources have noted that while 1520 Sedgwick Avenue was not the actual birthplace of hip hop – the genre developed slowly in several places in the 1970s – it was verified to be the place where one of the pivotal and formative events occurred that spurred hip hop culture forward. During a rally to save the building, DJ Kool Herc said, '1520 Sedgwick is the Bethlehem of Hip-Hop culture.'</p>"+
+              '<p>Attribution: 1520 Sedgwick Ave, <a href="https://en.wikipedia.org/wiki/1520_Sedgwick_Avenue">'+
+              'https://en.wikipedia.org/wiki/1520_Sedgwick_Avenue</a> </p> '
+              '</div>'+
+              '</div>';
+              var content8 = '<div id="content8">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">The Apollo Theater</h1>'+
+              '253 W 125th St, New York' + '<br>' +
+              '<img src="https://s-media-cache-ak0.pinimg.com/236x/15/4f/98/154f9804b05200abfc96b476394ed468.jpg">'+
+              '<div id="bodyContent8">'+
+              "<p>Located in Harlem, the Apollo opened in 1933 and was a main player in the birth of jazz, swing, bebop, R&B, gospel, blues, and soul. They continue to host their famous Amateur Night several times, a month, as well as other performances and also educational opportunities. Many famous musicians have had the opportunity to perform at the Apollo, including Ella Fitzgerald, Sarah Vaughan, Billie Holiday, James Brown, Jimi Hendrix, and Michael Jackson.</p>"+
+              '<p>Attribution: The Apollo Theater, <a href="https://www.apollotheater.org/">'+
+              'https://www.apollotheater.org/</a> </p> '
+              '</div>'+
+              '</div>';
+              var content9 = '<div id="content9">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">Village Vanguard</h1>'+
+              '178 7th Ave S, New York' + '<br>' +
+              '<img src="https://beatchickwrites.files.wordpress.com/2014/12/village-vanguard-interior.jpg?w=300&h=189">'+
+              '<div id="bodyContent9">'+
+              "<p>The Village Vanguard is a jazz club that was opened on February 22, 1935 by Max Gordon. At first, it featured many forms of music, such as folk music and beat poetry, but it switched to an all-jazz format in 1957. This club has helped unknown musicians, such as Thelonious Monk, launch their careers.Well known musicians such as John Coltrane and Bill Evans were regulars and recorded many songs there as well. In 1989, Max Gordon died. The day after, Lorraine Gordon closed the Vanguard. But the following day, she reopened it and has continued to run the place ever since. She has not made any alterations of any kind, and kept it how it was, how people liked it.</p>"+
+              '<p>Attribution: Village Vanguard, <a href="https://en.wikipedia.org/wiki/Village_Vanguard">'+
+              'https://en.wikipedia.org/wiki/Village_Vanguard</a> </p> '
+              '</div>'+
+              '</div>';
 
 
         //calls the infowindows
@@ -172,6 +225,18 @@
         });
         var infowindow5 = new google.maps.InfoWindow({
           content: content5
+        });
+        var infowindow6 = new google.maps.InfoWindow({
+          content: content6
+        });
+        var infowindow7 = new google.maps.InfoWindow({
+          content: content7
+        });
+        var infowindow8 = new google.maps.InfoWindow({
+          content: content8
+        });
+        var infowindow9 = new google.maps.InfoWindow({
+          content: content9
         });
 
 
@@ -221,6 +286,42 @@
         });
         marker5.addListener('click', function() {
           infowindow5.open(map, marker5);
+        });
+        var marker6 = new google.maps.Marker({
+          position: danceteria,
+          icon: image,
+          map: map,
+          title: 'Danceteria'
+        });
+        marker6.addListener('click', function() {
+          infowindow6.open(map, marker6);
+        });
+        var marker7 = new google.maps.Marker({
+          position: sedgwick,
+          icon: image,
+          map: map,
+          title: '1720 Sedgwick Ave'
+        });
+        marker7.addListener('click', function() {
+          infowindow7.open(map, marker7);
+        });
+        var marker8 = new google.maps.Marker({
+          position: apollo,
+          icon: image,
+          map: map,
+          title: 'The Apollo Theater'
+        });
+        marker8.addListener('click', function() {
+          infowindow8.open(map, marker8);
+        });
+        var marker9 = new google.maps.Marker({
+          position: vanguard,
+          icon: image,
+          map: map,
+          title: 'Village Vanguard'
+        });
+        marker9.addListener('click', function() {
+          infowindow9.open(map, marker9);
         });
 
         // Try HTML5 geolocation.
