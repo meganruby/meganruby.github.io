@@ -94,8 +94,8 @@
         var apollo= {lat: 40.810018  , lng: -73.950056};
         var vanguard= {lat: 40.73603  , lng: -74.001686};
         var cafewha= {lat: 40.7301  , lng: -74.0006};
-        var chelsea= {lat: 40.744350  , lng: -73.996852
-};
+        var chelsea= {lat: 40.744350  , lng: -73.996852};
+        var madison= {lat: 40.7505  , lng: -73.9934};
 
 
 
@@ -235,13 +235,23 @@
               '<img src="https://artanddiasporablog.files.wordpress.com/2013/08/chelsea-hotel.jpg?w=209&h=157&crop=1">'+
               '<div id="bodyContent10">'+
               "<p>	The Hotel Chelsea is a hotel where many famous musicians and writers stayed at one point or another. It is a designated New York City landmark because of all the famous residents that have lived there, and has been featured on TV shows, songs, and books. Notable musicians include the Grateful Dead, Patti Smith, Jimi Hendrix, and Rufus Wainwright. Leonard Cohen once wrote a song called “Hotel Chelsea #2”, and Graham Nash wrote a song called “The Chelsea Hotel”. Many other musicians have also referenced the hotel in their work. 
-</p>"+
-              '<p>Attribution: Wikipedia, <a https://en.wikipedia.org/wiki/Hotel_Chelsea
-">'+
+            </p>"+
+              '<p>Attribution: Wikipedia, <a https://en.wikipedia.org/wiki/Hotel_Chelsea">'+
               'https://en.wikipedia.org/wiki/Hotel_Chelsea</a> </p> '
               '</div>'+
               '</div>';
-
+          var content12 = '<div id="content12">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">Madison Square Garden</h1>'+
+              '4 Pennsylvania Plaza' + '<br>' +
+              '<img src="http://s2.dmcdn.net/Wx7u4/280x157-B_w.jpg">'+
+              '<div id="bodyContent9">'+
+              "<p>Madison Square Garden is an indoor arena, located on top of Pennsylvania Station. Many concerts are held there, as well  It is very large, holding up to 20,000 people, and is the third busiest music arena in the world. Many famous musicians have played at Madison Square Garden, including Elton John, Whitney Houston, Billy Joel, Michael Jackson, and Taylor Swift. John Lennon made his last concert appearance at Madison Square Garden before his death in 1980. </p>"+
+              '<p>Attribution: Madison Square Garden, <a href="https://en.wikipedia.org/wiki/Madison_Square_Garden">'+
+              'https://en.wikipedia.org/wiki/Madison_Square_Garden</a> </p> '
+              '</div>'+
+              '</div>';
 
         //calls the infowindows
         var infowindow1 = new google.maps.InfoWindow({
@@ -378,6 +388,15 @@
         });
         marker11.addListener('click', function() {
           infowindow11.open(map, marker11);
+        });
+          var marker12 = new google.maps.Marker({
+          position: madison,
+          icon: image,
+          map: map,
+          title: 'Madison Square Garden'
+        });
+        marker12.addListener('click', function() {
+          infowindow12.open(map, marker12);
         });
 
         // Try HTML5 geolocation.
