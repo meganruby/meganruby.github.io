@@ -94,6 +94,8 @@
         var apollo= {lat: 40.810018  , lng: -73.950056};
         var vanguard= {lat: 40.73603  , lng: -74.001686};
         var cafewha= {lat: 40.7301  , lng: -74.0006};
+        var chelsea= {lat: 40.744350  , lng: -73.996852
+};
 
 
 
@@ -218,12 +220,27 @@
               '115 Macdougal St' + '<br>' +
               '<img src="http://tse3.mm.bing.net/th?id=OIP.Me96779ddf33959dd450dbd06c9efc7d0o0&w=230&h=170&rs=1&pcl=dddddd&pid=1.1">'+
               '<div id="bodyContent10">'+
-              "<p>The Village Vanguard is a jazz club that was opened on February 22, 1935 by Max Gordon. At first, it featured many forms of music, such as folk music and beat poetry, but it switched to an all-jazz format in 1957. This club has helped unknown musicians, such as Thelonious Monk, launch their careers.Well known musicians such as John Coltrane and Bill Evans were regulars and recorded many songs there as well. In 1989, Max Gordon died. The day after, Lorraine Gordon closed the Vanguard. But the following day, she reopened it and has continued to run the place ever since. She has not made any alterations of any kind, and kept it how it was, how people liked it.Cafe Wha is a club located in Greenwich Village, Manhattan. It was started by Manuel Lee Roth in 1959 in a garage on Macdougal Street. Many musicians performed there, including Bob Dylan, who showed up at age 19 after hitchhiking to New York from Minnesota. Along with Dylan, musicians such as Jimi Hendrix and Bruce Springsteen performed there at the beginning of their careers. Other visitors included Allen Ginsberg and RIchard Pryor. Today, you can visit to hear a variety of music. </p>"+
+              "<p>Cafe Wha is a club located in Greenwich Village, Manhattan. It was started by Manuel Lee Roth in 1959 in a garage on Macdougal Street. Many musicians performed there, including Bob Dylan, who showed up at age 19 after hitchhiking to New York from Minnesota. Along with Dylan, musicians such as Jimi Hendrix and Bruce Springsteen performed there at the beginning of their careers. Other visitors included Allen Ginsberg and RIchard Pryor. Today, you can visit to hear a variety of music. 
+
+ </p>"+
               '<p>Attribution: Cafe Wha?, <a href="cafewha.com">'+
               'cafewha.com</a> </p> '
               '</div>'+
               '</div>';
-              
+                var content11= '<div id="content11">'+
+              '<div id="siteNotice">'+
+              '</div>'+
+              '<h1 id="firstHeading" class="firstHeading">Hotel Chelsea</h1>'+
+              '222 W 23rd St' + '<br>' +
+              '<img src="https://artanddiasporablog.files.wordpress.com/2013/08/chelsea-hotel.jpg?w=209&h=157&crop=1">'+
+              '<div id="bodyContent10">'+
+              "<p>	The Hotel Chelsea is a hotel where many famous musicians and writers stayed at one point or another. It is a designated New York City landmark because of all the famous residents that have lived there, and has been featured on TV shows, songs, and books. Notable musicians include the Grateful Dead, Patti Smith, Jimi Hendrix, and Rufus Wainwright. Leonard Cohen once wrote a song called “Hotel Chelsea #2”, and Graham Nash wrote a song called “The Chelsea Hotel”. Many other musicians have also referenced the hotel in their work. 
+</p>"+
+              '<p>Attribution: Wikipedia, <a https://en.wikipedia.org/wiki/Hotel_Chelsea
+">'+
+              'https://en.wikipedia.org/wiki/Hotel_Chelsea</a> </p> '
+              '</div>'+
+              '</div>';
 
 
         //calls the infowindows
@@ -257,7 +274,9 @@
          var infowindow10 = new google.maps.InfoWindow({
           content: content10
         });
-
+        var infowindow11 = new google.maps.InfoWindow({
+          content: content11
+        });
 
         //creates markers
         var marker1 = new google.maps.Marker({
@@ -350,6 +369,15 @@
         });
         marker10.addListener('click', function() {
           infowindow10.open(map, marker10);
+        });
+        var marker11 = new google.maps.Marker({
+          position: chelsea,
+          icon: image,
+          map: map,
+          title: 'Hotel Chelsea'
+        });
+        marker11.addListener('click', function() {
+          infowindow11.open(map, marker11);
         });
 
         // Try HTML5 geolocation.
