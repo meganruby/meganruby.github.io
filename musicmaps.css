@@ -73,13 +73,14 @@ a:focus {
   font-size: 36px;
 }
 
-.background {
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-attachment: fixed;
+.body {
+    background-image: url("background.jpeg");
+    background-color: white;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-	
 }
 
 
