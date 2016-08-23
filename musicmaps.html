@@ -436,7 +436,13 @@
         marker12.addListener('click', function() {
           infowindow12.open(map, marker12);
         });
-      marker13.addListener('click', function() {
+      var marker13 = new google.maps.Marker({
+          position: palladium,
+          icon: image,
+          map: map,
+          title: 'Palladium Theater'
+        });
+        marker13.addListener('click', function() {
           infowindow13.open(map, marker13);
         });
 
